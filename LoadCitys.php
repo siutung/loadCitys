@@ -6,7 +6,6 @@
  * Author: buff <admin@buffge.com>
  * Created on : 2017-9-5, 21:05:25
  * Author     : buff
- * QQ:1378504650
  */
 namespace loadCitys;
 /**
@@ -39,7 +38,7 @@ class LoadCitys
      * @var type int
      */
     protected
-            $currentConnect = 2;
+            $currentConnect = 50;
     /**
      * 总共要查询的数量
      * @var type int
@@ -129,7 +128,6 @@ class LoadCitys
 //输出错误信息
             echo "当前列表中所有城市都没有子城市.\n";
         }
-
     }
 
     /**
@@ -274,10 +272,6 @@ class LoadCitys
             $sql_values = '';
             for ($i = 0; $i < $citysLength; $i++) {
                 $sql_values .= "('{$cityInfo[$i]->provinceId}', '{$cityInfo[$i]->simpleName}', '{$cityInfo[$i]->lon}', '{$cityInfo[$i]->areaCode}', '{$cityInfo[$i]->cityId}', '{$cityInfo[$i]->remark}', '{$cityInfo[$i]->prePinYin}', '{$cityInfo[$i]->id}',\"{$cityInfo[$i]->pinYin}\", '{$cityInfo[$i]->parentId}', '{$cityInfo[$i]->level}', '{$cityInfo[$i]->areaName}', '{$cityInfo[$i]->simplePy}', '{$cityInfo[$i]->zipCode}', '{$cityInfo[$i]->countyId}', '{$cityInfo[$i]->lat}', '{$cityInfo[$i]->wholeName}'),";
-//                if (!isset($cityInfo[$i]->remark)) {
-//                    echo "\$i={$i} 当前服务器返回的数据为:\n";
-//                    print_r($mixedInfo);
-//                }
             }
             $sql_values = substr_replace($sql_values, '', -1);
             $sql .= $sql_values;

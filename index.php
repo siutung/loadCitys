@@ -6,14 +6,13 @@
  * Author: buff <admin@buffge.com>
  * Created on : 2017-9-5, 20:23:01
  * Author     : buff
- * QQ:1378504650
  */
 
 require './LoadCitys.php';
 use loadCitys\LoadCitys;
 
 $config = [
-    'appcode' => 'fb875932b22241169a963ac6b134c7da',
+    'appcode' => 'yourappcode',
     'host'    => '127.0.0.1',
     'name'    => 'mysql_username',
     'pwd'     => 'mysql_pwd',
@@ -28,4 +27,4 @@ $e_time = microtime(1);
 $end = date('Y\年n\月j\日H:i:s');
 echo "结束时间 --- {$end}\n";
 $all_time = $e_time - $n_time;
-echo "共用时 {$all_time}秒";
+echo "共用时 {$all_time}秒\n";
