@@ -10,7 +10,7 @@
 
 require './LoadCitys.php';
 use loadCitys\LoadCitys;
-
+set_time_limit(0);
 $config = [
     'appcode' => 'yourappcode',
     'host'    => '127.0.0.1',
