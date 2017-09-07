@@ -8,6 +8,7 @@
  * Author     : buff
  */
 namespace loadCitys;
+
 /**
  *  爬虫类
  */
@@ -105,6 +106,7 @@ class LoadCitys
         print_r($this->searchCitysList);
 
     }
+
     /**
      * 启动方法
      */
@@ -128,6 +130,7 @@ class LoadCitys
 //输出错误信息
             echo "当前列表中所有城市都没有子城市.\n";
         }
+
     }
 
     /**
@@ -299,6 +302,7 @@ class LoadCitys
                     $subLoad = new self($config);
                     $tempearchCitysList = [];
                     $subLoad->start();
+                    unset($subLoad);
                 }
             }
             else {
